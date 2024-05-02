@@ -1,0 +1,693 @@
+{
+	"info": {
+		"_postman_id": "be1ed7c4-c1f8-433e-aac5-ab46df459eca",
+		"name": "api-superflights",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25123762"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Cecilia\",\r\n    \"username\": \"cecilia\",\r\n    \"email\": \"cecilia@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/user",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Lorena Jaimes\",\r\n    \"username\": \"ljaimes\",\r\n    \"email\": \"ljaimes@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/user",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find One",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Lorena Jaimes\",\r\n    \"username\": \"ljaimes\",\r\n    \"email\": \"ljaimes@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/user/63c64a5777af09988fd175cb",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"user",
+								"63c64a5777af09988fd175cb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Lorena Jaimes\",\r\n    \"username\": \"ljaimes\",\r\n    \"email\": \"ljaimes@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/user/63c64a5777af09988fd175cb",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"user",
+								"63c64a5777af09988fd175cb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ramona Jaimes\",\r\n    \"username\": \"rjaimes\",\r\n    \"email\": \"rjaimes@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/user/63c64a5777af09988fd175cb",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"user",
+								"63c64a5777af09988fd175cb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "passengers",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Passenger Three\",\r\n    \"email\": \"passenger.three@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/passenger",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"passenger"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/passenger",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"passenger"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find One",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/passenger/63c7c0ed8270bce3b8081c18",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"passenger",
+								"63c7c0ed8270bce3b8081c18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/passenger/63c7af0a6329ef6ef9e99ae7",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"passenger",
+								"63c7af0a6329ef6ef9e99ae7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Passenger\",\r\n    \"email\": \"passenger@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/passenger/63c7c0ed8270bce3b8081c18",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"passenger",
+								"63c7c0ed8270bce3b8081c18"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "flights",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pilot\": \"Pilot JeanPaul\",\r\n    \"airplane\": \"Airbus A341\",\r\n    \"destinationCity\": \"Madrid\",\r\n    \"flightDate\": \"2023-01-18\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/flight",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"flight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/flight",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"flight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find One",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/flight/63c7be240263a7d12f92c4a0",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"flight",
+								"63c7be240263a7d12f92c4a0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pilot\": \"Pilot Julia Agreda\",\r\n    \"airplane\": \"Airbus A3445\",\r\n    \"destinationCity\": \"Madrid\",\r\n    \"flightDate\": \"2023-01-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/flight/63c7be240263a7d12f92c4a0",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"flight",
+								"63c7be240263a7d12f92c4a0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Passenger",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/flight/63c7be240263a7d12f92c4a0/passenger/63c7c13be7421c0b13e0ddd3",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"flight",
+								"63c7be240263a7d12f92c4a0",
+								"passenger",
+								"63c7c13be7421c0b13e0ddd3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/flight/63c7bdcc8e2a7085e74157ec",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"flight",
+								"63c7bdcc8e2a7085e74157ec"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/auth/signin",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test\",\r\n    \"username\": \"test\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/auth/signup",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
